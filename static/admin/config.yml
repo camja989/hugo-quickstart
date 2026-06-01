@@ -6,6 +6,16 @@ media_folder: static/images
 public_folder: /images
 
 collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "homepage"
+        label: "Homepage"
+        file: "content/_index.md"
+        fields:
+          - { label: "Heading", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+
   - name: "posts"
     label: "Posts"
     folder: "content/posts"
