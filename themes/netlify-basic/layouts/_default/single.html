@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div id="content">
+  <article>
+    <h1>{{ .Title }}</h1>
+    <time>{{ .Date.Format "January 2, 2006" }}</time>
+    {{ if .Params.description }}<p><em>{{ .Params.description }}</em></p>{{ end }}
+    <div class="post-body">
+      {{ .Content }}
+    </div>
+    <p><a href="/">← Back home</a></p>
+  </article>
+</div>
+{{ end }}

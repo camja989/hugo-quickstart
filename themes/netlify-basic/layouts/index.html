@@ -27,5 +27,16 @@
       </li>
     </ul>
   </div>
+  {{ $posts := where .Site.RegularPages "Section" "posts" }}
+  {{ if $posts }}
+  <div class="resource-list">
+    <h2>Posts</h2>
+    <ul>
+      {{ range $posts }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> <small>{{ .Date.Format "Jan 2, 2006" }}</small></li>
+      {{ end }}
+    </ul>
+  </div>
+  {{ end }}
 </div>
 {{ end }}
